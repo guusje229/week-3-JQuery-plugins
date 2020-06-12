@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+
+
+</head>
+
+<body>
+
+
+
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="">Nav1 </a></li>
+                <li><a href="">Nav1 </a></li>
+                <li><a href="">Nav1 </a></li>
+            </ul>
+            <div class="clear"></div>
+
+        </nav>
+
+        <div class="box">
+            <h1>onze eerst javascrips website</h1>
+        </div>
+
+        <a id="header-prev" class='header-ui' href='#'></a>
+        <a id="header-next" class='header-ui' href='#'></a>
+    </header>
+
+
+    <main>
+
+
+        <article>
+            <div class="box">
+                <h2>Article title</h2>
+                <a href="#  " id="cta">CTA</a>
+
+                <p>het is toch ' feestje lalala ik weet niet wat ik hier moet schrijven en ik heb geen zin om lorem ipsum te zoeken dus ik schrijf maar eventjes wat onzin, oh dit is nog niet lang genoeg voor twee regels dus ik schrijf nog maar even wat onzin,
+                    bedankt voor het lezen, like en subscribe.</p>
+                <a href="#" id="changingFont">het is toch ' feestje lalala ik weet niet wat ik hier moet schrijven en ik
+                    heb geen zin om lorem ipsum te zoeken dus ik schrijf maar eventjes wat onzin, oh dit is nog niet
+                    lang genoeg voor twee regels dus ik schrijf nog maar even wat onzin, bedankt voor het lezen, like en
+                    subscribe."</a>
+
+                <h3>beep</h3>
+
+                <a href="#" id="beep">My money's in that office, right? If she start giving me some <div class="beep"
+                        bullshit></div> about it ain't there, and we got to go someplace else and get it, I'm gonna
+                    shoot you in the head then and there. Then I'm gonna shoot that <div class="beep" bitch></div> in
+                    the kneecaps, find out where my <div class="beep" goddamn></div> money is. She gonna tell me too.
+                    Hey, look at me when I'm talking to you, <div class="beep" motherfucker></div>.</a>
+
+
+                <a href="a" class="thumb">1</a>
+                <a href="a" class="thumb">2</a>
+                <a href="a" class="thumb">3</a>
+                <a href="a" class="thumb">4</a>
+                <a href="a" class="thumb">5</a>
+                <div class="clear"></div>
+
+
+            </div>
+        </article>
+
+
+
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="jquery.backstretch.min.js"></script>
+    <script src="js/jquery.backstretch.min.js"></script>
+
+    <script>
+        $('header').backstretch([
+            "https://images.unsplash.com/photo-1485468935663-831e33cf812d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80",
+            'https://images.unsplash.com/photo-1537355233-8997913eaaa7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80',
+            'https://images.unsplash.com/photo-1507823782123-27db7f9fd196?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80'
+        ], {
+            duration: 3000,
+            fade: 750
+        });
+
+        $('#header-next').click(function() {
+
+            $('header').backstretch("next");
+
+        });
+        $('#header-prev').click(function() {
+
+            $('header').backstretch("prev");
+
+        });
+
+
+
+
+
+
+
+        // plugin toevoegen
+        //eerst plugin toevoegen
+        // syntax? 
+        // plugin initatialiseren
+
+
+
+        //1. selector
+        //2. functie
+        //3. opties
+
+
+        let titleColor = $("h1").css("color");
+
+        $("#changingFont").click(function() {
+
+
+            $("#changingFont").css({
+                "font-family": "Comic Sans MS",
+                "font-size": "2em",
+                "margin-bottom": "400px",
+                "padding-bottom": "200px"
+
+            })
+        })
+
+
+
+        $("#cta").click(function() {
+
+            $("#cta").css({
+                "color": titleColor,
+                "font-size": "4em",
+                "margin-left": "300px"
+
+            });
+
+        });
+
+
+        $(window).scroll(function() {
+
+            $("nav").css("background", titleColor);
+
+
+        });
+
+        $(document).ready(function() {
+            $(".beep").css("background-color", "yellow");
+        });
+    </script>
+
+
+    <!--let cta =  document.getElementById("cta");
+ //selector met welk element willen we iets gaan doen
+ // javascript manipuleert de dom
+
+
+
+ document.addEventListener("click" , function (event){
+
+    if (!event.target.matches("#cta")) return;
+
+    cta.style.color="red";
+ cta.style.fontSize="4em";   
+ cta.style.marginLeft="300px";  
+
+    console.log("geklikt op cta");
+
+ }, false);
+-->
+
+
+</body>
+
+</html>
